@@ -1,0 +1,18 @@
+<%= form_tag 'answer' do -%>
+<div style="margin-left: 600px">
+<% if @pic_user == nil %>
+<p class="incorrect">Please upload some images</p><br/>
+<%= link_to "Exit",users_path %><br/>
+<%else%>
+<%= image_tag("#{session[:pic_url]}",:width=>350,:height=>350) %>
+<br></br>
+
+<% @selected_users.each.each do |user| %>
+<%= radio_button_tag "user_id","#{user.id}",false,:id => "#{user.id}" %><%= user.name %>
+<% end %>
+<br/><br/>
+<%=  image_submit_tag("button_submit.png", :align => "center", :id => "Submit") %>
+<%= link_to "Exit",users_path %>
+<%end%>
+</div>
+<% end -%>
