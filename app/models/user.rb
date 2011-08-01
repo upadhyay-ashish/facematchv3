@@ -24,7 +24,6 @@ class User < ActiveRecord::Base
     user.first
    end
 
-
    def image_file_name
     "user_#{self.id + (123456789)}#{File.extname(self.avatar_file_name).downcase}"
    end

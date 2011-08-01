@@ -1,29 +1,48 @@
-<% form_for(@user, :html => { :multipart => true }) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<center>
+  <% form_for(@user, :html => { :multipart => true }) do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :avatar %><br />
-    <%= f.file_field :avatar %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <table style="margin-top: 200px; border: 1px solid #f0f0f0">
+      <tr>
+        <th>
+          <%= f.label :name %>
+        </th>
+        <td>
+          <%= f.text_field :name %>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <%= f.label :email %>
+        </th>
+        <td>
+          <%= f.text_field :email %>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <%= f.label :avatar %>
+        </th>
+        <td>
+          <%= f.file_field :avatar %>
+        </td>
+      </tr>
+      <tr>
+        <th>
+        </th>
+        <td>
+          <%= f.submit %>
+        </td>
+      </tr>
+    </table>
 <% end %>

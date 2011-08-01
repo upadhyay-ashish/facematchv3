@@ -1,18 +1,20 @@
 <%= form_tag 'play_game' do -%>
-<div style="margin-left: 600px">
 <% if(@selected_user == nil) %>
-<p class="incorrect">You have not selected any option</p><br/>
+<p class="incorrect"><b>You have not selected any option</b></p><br/>
 <% elsif "#{session[:pic_answer]}" == "#{session[:user_id]}" %>
-<p class="correct">Correct</p><br/>
+<div style="margin-left: 200px;"
+<p><%= image_tag('correct.png') %> </p>
+</div><br/>
 <% else %>
-<p class="incorrect">
-Incorrect
-</p>
-<p class="correct">The Correct answer is <%= session[:pic_name] %></p><br/><br/>
+<div style="margin-left: 200px;"
+<p><%= image_tag('incorrect.png') %> </p>
+<p class="correct"><b>The Correct answer is</b> <%= session[:pic_name] %></p><br/><br/>
+</div>
+<center>
 <%= image_tag("#{session[:pic_url]}",:width=>350,:height=>350) %><br/><br/><br/><br/>
 <% end %>
-<%= image_submit_tag("play_again.jpg", :align => "center", :id => "Play_Again") %>
-<%= link_to "Exit",users_path %>
-
-</div>
+<center>
+     <p><%= image_submit_tag("play_again.png", :id => "Play_Again") %></p>
+<center>
+<p><%= link_to image_tag('back.png'),users_path %></p>
 <% end -%>

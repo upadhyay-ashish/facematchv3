@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<br></br><br></br><br></br>
 <center>
 <p>
   <b>Name:</b>
@@ -12,7 +12,7 @@
 
 <p>
   <b>Avatar:</b>
-  <%=  image_tag(path_to_image(@user.avatar.url),:width=>150,:height=>150) %>
+  <%=  image_tag(@user.avatar.url,:width=>250,:height=>250) %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

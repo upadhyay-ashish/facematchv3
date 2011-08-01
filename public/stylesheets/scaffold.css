@@ -1,10 +1,3 @@
-/*body {
-    background : url("../images/background_user.png") ;
-    font-family: Verdana, Helvetica, Arial;
-    font-size: 14px;
-
-}*/
-
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
@@ -61,11 +54,11 @@ div.field, div.actions {
 }
 
 .incorrect {
-   color: red
+   color: black
 }
 
 .correct {
    font-weight: bold;
    font-style: italic;
-   color: green
+   color: black
 }

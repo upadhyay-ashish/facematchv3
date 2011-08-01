@@ -1,28 +1,11 @@
-<h1>Listing users</h1>
-
 <center>
-  <%= link_to 'Play Game',:controller=>'play',:action=>'play_game' %>
 
-<table>
-  <tr><hr></hr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Photo</th>
-    <th></th>
-    <th></th>
-  
-  </tr>
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.name %></td>
-    <td><%= user.email %></td>
-    <td><%= image_tag(user.avatar.url,:width=>50,:height=>50) %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-   </tr>
-<% end %>
-</table>
-  <center>
-<br />
+<div id="left">
+  <%= link_to image_tag('playgame.png',:class => "image"),:controller=>'play',:action=>'play_game' %>
+</div>
 
-<%= link_to 'New User', new_user_path %>
+
+<div id="right">
+<%= link_to image_tag('upload.png',:class => "image"), new_user_path %>
+</div>
+

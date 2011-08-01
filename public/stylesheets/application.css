@@ -1,0 +1,57 @@
+root { 
+    display: block;
+}
+body
+{
+    background: url("/images/body.jpg");
+}
+#banner
+{
+    background: url("/images/banner.png");
+    height: 158px;
+    width: 710px;
+    margin-left: 290px;
+    -moz-box-shadow: 1px 1px 10px black;
+}
+#mainbox
+{
+    margin-top: 30px;
+    margin-left: 350px;
+    width: 600px;
+    height: 500px;
+    -moz-box-shadow: 1px 1px 10px black;
+    position: relative;
+}
+#left
+{
+    margin-left: 30px;
+    margin-top: 300px;
+    width: 166px;
+    height: 129px;
+    display:inline;
+    position: relative;
+}
+#right
+{
+    margin-left: 30px;
+    margin-top: 50px;
+    width: 172px;
+    height: 135px;
+    display:inline;
+    position: relative;
+}
+.image
+{
+    margin-top: 190px;
+    -moz-box-shadow: 1px 1px 10px gold;
+}
+.image1
+{
+    margin-top: 30px;
+    margin-left: 160px;
+    -moz-box-shadow: 2px 2px 10px gold;
+}
+.radio
+{
+    color: blue;
+}
